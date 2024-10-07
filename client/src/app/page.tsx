@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <div>dd</div>
+    <div>내 페이지</div>
   );
 }
