@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <div>내 페이지</div>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">내 페이지</div>
   );
 }
