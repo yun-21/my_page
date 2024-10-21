@@ -30,12 +30,12 @@ export default function RootLayout({
         <div className="text-6xl text-center h-1/10">
           PORTFOLIO
         </div>
-        <div className="flex flex-grow w-full">
-          <div className="w-1/4 absolute z-10">
+        <div className="flex flex-grow w-full h-full">
+          <div className="w-1/12 absolute z-10">
             <MenuComponent/>
           </div>
-          <div className="flex-grow ml-7 mt-2 z-0">
-            <div className="bg-red-200 w-full h-full flex items-center justify-center">
+          <div className="flex-grow ml-7 mt-2 z-0 flex justify-center items-center">
+            <div className="bg-red-200 flex items-center justify-center w-11/12 h-5/6">
               {children}
             </div>
           </div>
