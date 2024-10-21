@@ -26,13 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <div>
+      <body className="w-full h-screen flex flex-col">
+        <div className="text-6xl text-center h-1/10">
           PORTFOLIO
         </div>
-        <MenuComponent/>
-        <div>
-          {children}
+        <div className="flex flex-grow relative w-full">
+          <div className="w-2/10 absolute z-10">
+            <MenuComponent/>
+          </div>
+          <div className="flex-grow absolute ml-7 mt-2 h-full w-full z-0">
+            {children}
+          </div>
         </div>
       </body>
     </html>
