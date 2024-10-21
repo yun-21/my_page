@@ -2,15 +2,10 @@
 
 import React, { useState } from "react";
 import ProjectSubMenu from "./project_menu/sub_menu";
-import StackSubMenu from "./stack_menu/sub_menu";
-import ProfileSubMenu from "./profile_menu/sub_menu";
 
 export default function MenuComponent() {
   const [openMenu, setOpenMenu] = useState(false);
   const [projectMenu, setProjectMenu] = useState(false);
-  const [stackMenu, setStackMenu] = useState(false);
-  const [profileMenu, setProfileMenu] = useState(false);
-
   return (
     <div onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)}>
       목차
@@ -20,13 +15,11 @@ export default function MenuComponent() {
             PROJECT
           {projectMenu && <ProjectSubMenu/>}
           </div>
-          <div onMouseEnter={() => setStackMenu(true)} onMouseLeave={() => setStackMenu(false)}>
+          <div>
             STACK
-            {stackMenu && <StackSubMenu/>}
           </div>
-          <div onMouseEnter={() => setProfileMenu(true)} onMouseLeave={() => setProfileMenu(false)}>
+          <div>
             PROFILE
-            {profileMenu && <ProfileSubMenu/>}
           </div>
         </div>
       )}
