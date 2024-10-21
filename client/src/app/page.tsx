@@ -1,13 +1,11 @@
 "use client"
 // import Image from "next/image";
+import TitleCss from "./component/location_text/title_css";
 
 export default function Home() {
   return (
     <>
-      <div>
-        YEAR
-      </div>
-
+      <TitleCss title="YEAR"/>
       <div className="h-2 bg-red-700 relative flex justify-between items-center px-3 w-full">
         <div className="relative">
           <div className="w-60 h-1 bg-blue-700 rotate-90 absolute z-0 -ml-24 -mt-20 flex">
