@@ -7,13 +7,19 @@ export default function MenuComponent() {
   const [openMenu, setOpenMenu] = useState(false);
   const [projectMenu, setProjectMenu] = useState(false);
   return (
-    <div onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)}>
-      목차
+    <div className="text-4xl" onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)}>
+      =
       {openMenu && (
-        <div>
-          <div onMouseEnter={() => setProjectMenu(true)} onMouseLeave={() => setProjectMenu(false)}>
-            PROJECT
-          {projectMenu && <ProjectSubMenu/>}
+        <div className="bg-blue-500 ml-6">
+          <div className="flex" onMouseEnter={() => setProjectMenu(true)} onMouseLeave={() => setProjectMenu(false)}>
+            <div>
+              PROJECT
+            </div>
+              {projectMenu && (
+              <div>
+                <ProjectSubMenu />
+              </div>
+                )}
           </div>
           <div>
             STACK
