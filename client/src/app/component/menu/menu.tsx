@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import ProjectSubMenu from "./project_menu/sub_menu";
+import Link from "next/link";
 
 export default function MenuComponent() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -15,18 +16,22 @@ export default function MenuComponent() {
             <div>
               PROJECT
             </div>
-              {projectMenu && (
+            {projectMenu && (
               <div>
                 <ProjectSubMenu />
               </div>
-                )}
+            )}
           </div>
-          <div>
-            STACK
-          </div>
-          <div>
-            PROFILE
-          </div>
+          <Link href="/component/stack">
+            <div>
+              STACK
+            </div>
+          </Link>
+          <Link href="/component/profile">
+            <div>
+              PROFILE
+            </div>
+          </Link>
         </div>
       )}
     </div>
