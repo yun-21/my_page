@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import MenuComponent from "./component/menu/menu";
+import Link from "next/link";
+import CheckComponent from "./project_slide";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -27,16 +29,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="w-full h-screen flex flex-col">
-        <div className="text-6xl text-center h-1/10">
-          PORTFOLIO
-        </div>
+        <Link href="/">
+          <div className="text-6xl text-center font-extrabold">
+            PORTFOLIO
+          </div>
+        </Link>
         <div className="flex flex-grow w-full h-full">
           <div className="w-1/12 absolute z-10">
-            <MenuComponent/>
+            <MenuComponent />
           </div>
-          <div className="flex-grow ml-7 mt-2 z-0 flex justify-center items-center">
-            <div className="bg-red-200 flex items-center justify-center w-11/12 h-5/6">
+          <div className="flex-grow ml-7 mt-2 z-0 flex justify-center items-center flex-col">
+            <div className="bg-red-200 flex items-center justify-center w-11/12 h-5/6 scrollable-content overflow-y-scroll">
               {children}
+            </div>
+            <div className="w-full">
+              <CheckComponent/>
             </div>
           </div>
         </div>
